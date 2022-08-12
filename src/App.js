@@ -1,3 +1,4 @@
+import CountdownAnimation from "./components/CountdownAnimation";
 import SetPomodoro from "./components/SetPomodoro";
 
 function App() {
@@ -6,6 +7,9 @@ function App() {
       <h1>POMODORO</h1>
       <small>Soyez productif </small>
       <SetPomodoro />
+      {/* <CountdownAnimation>
+        cedr
+      </CountdownAnimation> */}
     </div>
   );
 }

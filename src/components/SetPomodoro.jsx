@@ -27,7 +27,10 @@ const SetPomodoro = () => {
 		console.log(newTimer);
 	};
 
-	const handleSubmit = () => {};
+	const handleSubmit = (e) => {
+		e.preventDefault();
+		// updateExecuter(newTimer);
+	};
 
 	return (
 		<div className='form-container'>
