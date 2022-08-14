@@ -18,7 +18,7 @@ function App() {
 		updateExecute,
 	} = useContext(SettingsContext);
   
-  useEffect(() => updateExecute(executing), [executing, startAnimate]);
+  useEffect(() => updateExecute(executing), [executing, startAnimate, updateExecute]);
 	return (
 		<div className='container'>
 			<h1>POMODORO</h1>
