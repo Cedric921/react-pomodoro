@@ -41,6 +41,7 @@
 
 .input-wrapper .input {
 	border-radius: 50%;
+	border: none;
 	height: 80px;
 	width: 80px;
 
