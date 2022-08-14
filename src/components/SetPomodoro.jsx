@@ -40,21 +40,21 @@ const SetPomodoro = () => {
 			<form noValidate>
 				<div className='input-wrapper'>
 					<input
-						type='number'
+						type='text'
 						className='input'
 						name='work'
 						onChange={handleChange}
 						value={newTimer.work}
 					/>
 					<input
-						type='number'
+						type='text'
 						className='input'
 						name='shortBreak'
 						onChange={handleChange}
 						value={newTimer.short}
 					/>
 					<input
-						type='number'
+						type='text'
 						className='input'
 						name='longBreak'
 						onChange={handleChange}

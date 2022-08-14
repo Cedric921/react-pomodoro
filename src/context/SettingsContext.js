@@ -27,8 +27,22 @@ const SettingsContextProvider = ({ children }) => {
 		setStartAnimate(false);
 	};
 
+	const settingBtn = (setting) => {
+		setExecuting({});
+		setPomodoro(0);
+	};
+
+	const setCurrentTimer = (active_state) => {
+		updateExecute({
+			...executing,
+			active: active_state,
+		});
+		setTimerTime(executing);
+	};
+
 	const updateExecute = (updateExecutings) => {
 		setExecuting(updateExecutings);
+		setTimerTime(updateExecutings);
 	};
 
 	const setTimerTime = (evaluate) => {
@@ -36,14 +50,28 @@ const SettingsContextProvider = ({ children }) => {
 			case 'work':
 				setPomodoro(evaluate.work);
 				break;
+			case 'short':
+				setPomodoro(evaluate.short);
+				break;
+			case 'long':
+				setPomodoro(evaluate.long);
+				break;
 
 			default:
+				setPomodoro(0);
 				break;
 		}
 	};
 
+	const child = ({ remainingTimer }) => {
+		const minutes = Math.floor(remainingTimer / 60);
+		const seconds = remainingTimer % 60;
+
+		return `${minutes} : ${seconds}`;
+	};
+
 	return (
-		<SettingsContext.Provider value={{ stopTimer, updateExecute }}>
+		<SettingsContext.Provider value={{ pomodoro, executing, startAnimate, startTimer, pauseTimer,stopTimer, settingBtn, setCurrentTimer, updateExecute, child }}>
 			{children}
 		</SettingsContext.Provider>
 	);
