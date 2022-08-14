@@ -1,4 +1,4 @@
-import CountdownAnimation from "./components/CountdownAnimation";
+// import CountdownAnimation from "./components/CountdownAnimation";
 import SetPomodoro from "./components/SetPomodoro";
 
 function App() {
