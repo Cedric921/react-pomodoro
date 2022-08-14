@@ -10,7 +10,7 @@ const SetPomodoro = () => {
 		active: 'work',
 	});
 
-	const { updateExecuter } = useContext(SettingsContext);
+	const { updateExecute } = useContext(SettingsContext);
 
 	const handleChange = (input) => {
 		const { name, value } = input.target;
@@ -32,7 +32,7 @@ const SetPomodoro = () => {
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
-		updateExecuter(newTimer);
+		updateExecute(newTimer);
 	};
 
 	return (

@@ -2,7 +2,7 @@ import React, { createContext, useState } from 'react';
 
 export const SettingsContext = createContext();
 
-const SettingsContextProvider = ({ children }) => {
+const SettingsContextProvider = (props) => {
 	const [pomodoro, setPomodoro] = useState(0);
 	const [executing, setExecuting] = useState({});
 	/*
@@ -27,7 +27,7 @@ const SettingsContextProvider = ({ children }) => {
 		setStartAnimate(false);
 	};
 
-	const settingBtn = (setting) => {
+	const settingBtn = () => {
 		setExecuting({});
 		setPomodoro(0);
 	};
@@ -63,16 +63,29 @@ const SettingsContextProvider = ({ children }) => {
 		}
 	};
 
-	const child = ({ remainingTimer }) => {
-		const minutes = Math.floor(remainingTimer / 60);
-		const seconds = remainingTimer % 60;
+	const child = ({ remainingTime }) => {
+		const minutes = Math.floor(remainingTime / 60);
+		const seconds = remainingTime % 60;
 
 		return `${minutes} : ${seconds}`;
 	};
 
 	return (
-		<SettingsContext.Provider value={{ pomodoro, executing, startAnimate, startTimer, pauseTimer,stopTimer, settingBtn, setCurrentTimer, updateExecute, child }}>
-			{children}
+		<SettingsContext.Provider
+			value={{
+				pomodoro,
+				executing,
+				startAnimate,
+				startTimer,
+				pauseTimer,
+				stopTimer,
+				settingBtn,
+				setCurrentTimer,
+				updateExecute,
+				child,
+			}}
+		>
+			{props.children}
 		</SettingsContext.Provider>
 	);
 };

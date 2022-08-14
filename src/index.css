@@ -41,7 +41,6 @@
 
 .input-wrapper .input {
 	border-radius: 50%;
-	border: 1px solid #ac1b1b;
 	height: 80px;
 	width: 80px;
 
@@ -68,4 +67,67 @@
 .form-container button:hover {
   background-color: #ac1b1b;
   color: white;
+}
+
+.labels {
+	padding: 3px;
+	margin: 20px;
+	border-radius: 50px;
+	background-color: #a03232;
+	list-style: none;
+	display: flex;
+}
+
+.labels li button{
+	box-sizing: border-box;
+	padding: 10px 20px;
+	margin: 2px;
+	border-radius: 50px;
+	border: none;
+	transition: all .4s ease-in-out;
+
+	color: #ac1b1b;
+}
+
+.labels li button:hover {
+	background: #a03232;
+	border: 2px solid white;
+	padding: 8px 18px;
+	color: white;
+}
+
+.labels li button:hover {
+	background: #a03232;
+	border: 2px solid white;
+	padding: 8px 18px;
+	color: white;
+}
+
+
+button{
+	box-sizing: border-box;
+	padding: 8px 20px;
+	margin: 10px;
+	border-radius: 50px;
+	border: none;
+	transition: all .4s ease-in-out;
+
+	color: #ac1b1b;
+	
+}
+
+button:hover {
+	background: #a03232;
+	padding: 8px 18px;
+	color: white;
+}
+
+.active {
+	background: #a03232 !important; 
+}
+
+.time-wrapper{
+	font-size: 50px;
+	box-shadow: 0 0 20px gray;
+	border-radius: 50%;
 }

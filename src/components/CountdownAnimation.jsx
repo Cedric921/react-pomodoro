@@ -11,11 +11,12 @@ const CountdownAnimation = ({ key = 1, timer = 20, animate = true, children } = 
 			key={key}
 			isPlaying={animate}
 			duration={timer * 60}
-			colors={['green', 0.33]}
-         trailColor='grey'
-         onComplete={
-            () => stopTimer()
-         }
+			colors={['#6d9b6d', '#eed254', '#9b0000']}
+			colorsTime={[timer * 60, timer * 60 /2, 0]}
+			strokeWidth={6}
+			size={220}
+			trailColor='#c78181'
+			onComplete={() => stopTimer()}
 		>
 			{children}
 		</CountdownCircleTimer>
